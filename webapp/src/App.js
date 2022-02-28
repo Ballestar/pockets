@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import ConnectWallet from './components/ConnectWallet';
+import { useEthers } from '@usedapp/core'
 
 function App() {
+  const { activateBrowserWallet, deactivate, account } = useEthers()
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +21,10 @@ function App() {
         >
           Learn React
         </a>
+        <div>
+          {!account && <button onClick={activateBrowserWallet}> Connect </button>}
+          {account && <button onClick={deactivate}> Disconnect </button>}
+        </div>      
       </header>
     </div>
   );

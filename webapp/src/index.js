@@ -3,10 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Kovan, DAppProvider } from '@usedapp/core'
+
+const config = {
+  readOnlyChainId: Kovan.chainId,
+  readOnlyUrls: {
+    [Kovan.chainId]: "https://kovan.infura.io/v3/da93445aed0147f0903f7424020a8e45",
+  },
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <DAppProvider config={config}>
+      <App />
+    </DAppProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
