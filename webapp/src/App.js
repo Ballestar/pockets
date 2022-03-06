@@ -1,18 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
 import ConnectWallet from './components/ConnectWallet';
-import { useEthers } from '@usedapp/core'
+import { useEthers } from '@usedapp/core';
 import Navbar from './components/Navbar';
+import CurrentNFT from './components/CurrentNFT';
+import CardDescription from './components/CardDescription';
+import CardID from './components/CardID';
+import StackedNFT from './components/StackedNFT';
+import NFTDropdown from './components/NFTDropdown';
+
 function App() {
   const { activateBrowserWallet, deactivate, account } = useEthers()
 
   return (
     <div class='px-20 bg-teal-500'>
       <Navbar/>
-      <div class="grid grid-cols-7 grid-rows-3 gap 4" >
-        <div class="...">01</div>
-        <div class="col-span-5 ...">02</div>
-        <div class="...">03</div>
+      <div class="flex flex-wrap grid grid-cols-7 grid-rows-4 gap 4" >
+        <CardID class="col-span-1 ..."></CardID>
+        <CurrentNFT class="..."></CurrentNFT>
+        <StackedNFT class="..."></StackedNFT>
+        <NFTDropdown class="..."></NFTDropdown>
+        <CardDescription class="col-span-1 ..."></CardDescription>
+
       </div>
     </div>
   );
