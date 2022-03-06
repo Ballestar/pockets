@@ -6,7 +6,7 @@ const Navbar = () => {
     const { activateBrowserWallet, deactivate, account } = useEthers()
 
   return (
-    <nav class="bg-teal-500 border-gray-200 px-2 sm:px-4 py-20 rounded dark:bg-gray-800">
+    <nav class="bg-teal-500 border-gray-200 px-2 my-5 sm:px-4 py-2 rounded dark:bg-gray-800">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="#" class="flex items-center">
                 <img src= {pocketslogo} class="mr-3 h-6 sm:h-10" alt="Pockets Logo" />

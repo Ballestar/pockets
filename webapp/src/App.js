@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div class='px-20 bg-teal-500'>
-      <Navbar/>
+      <Navbar my-5> </Navbar>
       <div class="flex flex-wrap grid grid-cols-7 grid-rows-4 gap 4" >
         <CardID class="col-span-1 ..."></CardID>
         <CurrentNFT class="..."></CurrentNFT>
