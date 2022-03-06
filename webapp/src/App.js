@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import ConnectWallet from './components/ConnectWallet';
 import { useEthers } from '@usedapp/core';
 import Navbar from './components/Navbar';
 import CurrentNFT from './components/CurrentNFT';

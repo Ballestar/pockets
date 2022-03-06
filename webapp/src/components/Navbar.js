@@ -1,4 +1,5 @@
 import React from 'react'
+import ConnectWallet from './ConnectWallet';
 import pocketslogo from '../assets/pockets-logo.png'
 import { useEthers } from '@usedapp/core'
 
